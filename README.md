@@ -4,6 +4,8 @@ A collection of [Lune](https://lune-org.github.io/docs) scripts for managing Rob
 
 ## Recommended Usage
 
+To get started, drag and drop the `.lune` folder into your project, alongside `rtools.luau` and a `.env` file. Make sure to add `.env` to your `.gitignore`.
+
 Each team member should have their own place under the game to work in. The typical workflow for a feature looks like this:
 
 1. **Pull from main** and run `build` to publish the latest code to your personal place.
@@ -22,7 +24,7 @@ Assets like the map and UI should be created separately by the responsible devel
 Starts a local development session. Ensures the rojo plugin is up to date, watches your project for sourcemap changes, and launches `rojo serve`.
 
 ```sh
-lune run scripts/serve
+lune run serve
 ```
 
 ### `build`
@@ -30,7 +32,7 @@ lune run scripts/serve
 Builds the project into a `.rbxl` file using Rojo and publishes it to a selected Roblox place via the Open Cloud API. You will be prompted to choose which place to publish to.
 
 ```sh
-lune run scripts/build
+lune run build
 ```
 
 ### `syncback`
@@ -38,7 +40,7 @@ lune run scripts/build
 Downloads a place from Roblox and syncs its contents back into the local filesystem using `rojo syncback`.  Will not run if `rojo serve` is currently active, as it could lead to files being duplicated.
 
 ```sh
-lune run scripts/syncback
+lune run syncback
 ```
 
 ### `revert`
@@ -46,7 +48,7 @@ lune run scripts/syncback
 Rolls back a selected place to a previous version. Lists recent versions with timestamps and prompts for confirmation before reverting.
 
 ```sh
-lune run scripts/revert
+lune run revert
 ```
 
 ## Installing Lune
