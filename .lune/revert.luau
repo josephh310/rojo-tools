@@ -5,10 +5,10 @@
 ]]
 
 local stdio = require("@lune/stdio")
-local listPlaces = require("../functions/listPlaces")
-local listVersions = require("../functions/listVersions")
-local rollbackVersion = require("../functions/rollbackVersion")
-local config = require("../config")
+local listPlaces = require("./functions/listPlaces")
+local listVersions = require("./functions/listVersions")
+local rollbackVersion = require("./functions/rollbackVersion")
+local config = require("../rtools")
 
 local UNIVERSE_ID = config.UNIVERSE_ID
 

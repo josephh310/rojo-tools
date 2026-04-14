@@ -6,10 +6,10 @@
 
 local fs = require("@lune/fs")
 local stdio = require("@lune/stdio")
-local runCommands = require("../modules/commandRunner")
-local listPlaces = require("../functions/listPlaces")
-local uploadPlace = require("../functions/uploadPlace")
-local config = require("../config")
+local runCommands = require("./modules/commandRunner")
+local listPlaces = require("./functions/listPlaces")
+local uploadPlace = require("./functions/uploadPlace")
+local config = require("../rtools")
 
 local UNIVERSE_ID = config.UNIVERSE_ID
 local OUTPUT_FILE = "build.rbxl"

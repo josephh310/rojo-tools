@@ -8,10 +8,10 @@ local fs = require("@lune/fs")
 local process = require("@lune/process")
 local roblox = require("@lune/roblox")
 local stdio = require("@lune/stdio")
-local runCommands = require("../modules/commandRunner")
-local downloadPlace = require("../functions/downloadPlace")
-local listPlaces = require("../functions/listPlaces")
-local config = require("../config")
+local runCommands = require("./modules/commandRunner")
+local downloadPlace = require("./functions/downloadPlace")
+local listPlaces = require("./functions/listPlaces")
+local config = require("../rtools")
 
 local isServing
 if process.os == "windows" then

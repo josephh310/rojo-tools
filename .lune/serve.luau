@@ -3,7 +3,7 @@
     Description: Serves the place using rojo, ensuring the plugin is installed first
 ]]
 
-local runCommands = require("../modules/commandRunner")
+local runCommands = require("./modules/commandRunner")
 
 runCommands.runBatch({
     [1] = {
