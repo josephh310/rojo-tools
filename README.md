@@ -4,7 +4,7 @@ A collection of [Lune](https://lune-org.github.io/docs) scripts for managing Rob
 
 ## Recommended Usage
 
-To get started, drag and drop the `.lune` folder into your project, alongside `rtools.luau` and a `.env` file. Make sure to add `.env` to your `.gitignore`.
+To get started, drag and drop the `.lune` folder into your project, alongside `rtools.luau` and a `.env` file in your root directory. Make sure to add `.env` to your `.gitignore`, so you don't commit your API key. See [Configuration](#configuration) for more information about your API key.
 
 Each team member should have their own place under the game to work in. The typical workflow for a feature looks like this:
 
@@ -51,7 +51,7 @@ Rolls back a selected place to a previous version. Lists recent versions with ti
 lune run revert
 ```
 
-## Installing Lune
+## Installation
 
 [Rokit](https://github.com/rojo-rbx/rokit) is a toolchain manager for Roblox projects. Use it to install Lune:
 
@@ -81,10 +81,10 @@ lune run revert
    rokit install
    ```
 
-5. **Verify the installation:**
+5. **Set up type definitions:**
 
    ```sh
-   lune --version
+   lune setup
    ```
 
 
@@ -94,6 +94,8 @@ These scripts require an `OPEN_CLOUD_KEY` set in a `.env` file at the project ro
 
 Generate an API key at [Creator Dashboard > Credentials](https://create.roblox.com/dashboard/credentials). For added security, lock the key to your specific game under each permission's settings.
 
+You will also need to set your `UNIVERSE_ID` in `rtools.luau` to match your game's universe ID.
+
 The key needs the following permissions depending on the script:
 
 | Script     | Required Permissions            |
@@ -102,13 +104,9 @@ The key needs the following permissions depending on the script:
 | `syncback` | `legacy-asset:manage`          |
 | `revert`   | `asset:read`, `asset:write`    |
 
-## Acknowledgements
-
-Thank you to the [Rojo](https://rojo.space) and [Lune](https://lune-org.github.io/docs) teams for building the tools that make this workflow possible.
-
 ## Example Project File
 
-Here's an example `default.project.json` to get started with. Adapt the services, paths, and properties to fit your game.
+Here's an example `default.project.json` to get started with. Adapt the services, paths, and properties to fit your game. You'll need to make a folder for each service under a `build` directory.
 
 ```json
 {
@@ -182,3 +180,7 @@ Here's an example `default.project.json` to get started with. Adapt the services
 ```
 
 The `syncbackRules.ignoreTrees` *must* list any paths managed by your source code (e.g. `Source/Client`, `Source/Shared`, `Source/Server`) and `Packages`, so that`syncback doesn't overwrite them or duplicate them in your build file.
+
+## Acknowledgements
+
+Thank you to the [Rojo](https://rojo.space) and [Lune](https://lune-org.github.io/docs) teams for building the tools that make this workflow possible.
