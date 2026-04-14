@@ -2,6 +2,8 @@
 
 A collection of [Lune](https://lune-org.github.io/docs) scripts for managing Roblox places with [Rojo](https://rojo.space). These scripts automate common workflows like building, serving, syncing back, and reverting Roblox places via the Open Cloud API.
 
+See [rojo-tools-example](https://github.com/josephh310/rojo-tools-example) for a ready-to-use starter project.
+
 ## Recommended Usage
 
 To get started, drag and drop the `.lune` folder into your project, alongside `rtools.luau` and a `.env` file in your root directory. Make sure to add `.env` to your `.gitignore`, so you don't commit your API key. See [Configuration](#configuration) for more information about your API key.
