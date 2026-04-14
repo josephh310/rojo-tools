@@ -90,7 +90,11 @@ lune run revert
 
 ## Configuration
 
-These scripts require an `OPEN_CLOUD_KEY` set in a `.env` file at the project root. __Every team member should have their own key__. The key needs the following permissions depending on the script:
+These scripts require an `OPEN_CLOUD_KEY` set in a `.env` file at the project root. __Every team member should have their own key__.
+
+Generate an API key at [Creator Dashboard > Credentials](https://create.roblox.com/dashboard/credentials). For added security, lock the key to your specific game under each permission's settings.
+
+The key needs the following permissions depending on the script:
 
 | Script     | Required Permissions            |
 | ---------- | ------------------------------- |
